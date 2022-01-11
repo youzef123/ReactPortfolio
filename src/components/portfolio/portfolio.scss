@@ -1,0 +1,91 @@
+@import "./../../global.scss";
+.portfolio{
+    padding-top: 10px;
+    background-color: rgb(242, 248, 246);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h1{
+        overflow: hidden;
+        font-size: 50px;
+
+        @include mobile{
+            font-size: 30px;
+        }
+    }
+    ul{
+       
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+
+        @include mobile{
+         margin: 10px 0;
+         flex-wrap: wrap;
+         justify-content: center;
+        }
+    }
+    .container{
+     
+        overflow: hidden;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include mobile{
+            width: 100%;
+        }
+
+        .items{
+            overflow: hidden;
+            height: 180px;
+            width: 250px;
+            border-radius: 10px;
+            border: 1px lightgray;
+            margin: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+
+            @include mobile{
+                margin: 5px 10px;
+                width: 150px;
+                height: 130px;
+            }
+
+            h3{
+                position: absolute;
+                font-size: 25px;
+
+                @include mobile{
+                    font-size: 20px;
+
+                    flex-direction: wrap;
+                }
+            }
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                z-index: 1;
+                transition: all .5s ease;
+            }
+            &:hover{
+                background-color: $mainColor;
+                img{
+                  
+                    opacity: 0.2;
+                    z-index: 0;
+                }
+        }
+      
+        }
+      
+    }
+}

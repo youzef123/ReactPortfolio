@@ -1,0 +1,269 @@
+@import "../../global.scss";
+
+
+.works{
+    margin: 0;
+    background-image: linear-gradient(whitesmoke, #B1D0E0, #0296e0 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow{
+        height: 55px;
+        position: absolute;
+        cursor: pointer;
+
+        @include mobile{
+            display: none;
+        }
+
+        &.left{
+            left: 100px;
+            transform: rotateY(180deg);
+        }
+        &.right
+        {
+            right: 100px;
+        }
+
+        
+    }
+    .slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+
+        @include mobile{
+            padding-top: 300px;
+            height: 150vh;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .item{
+                overflow: hidden;
+                width: 700px;
+                height: 100%;
+                background-color: azure;
+                border-radius: 20px;
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+
+                @include mobile{
+                   width: 90%;
+                   height: 300px;
+                   margin-bottom: 20px;
+                }
+                
+                .left{
+                    flex: 6;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 10px;
+                    color: black;
+
+                    h2{
+                      
+                        @include mobile{
+                            font-size: 20px;
+                          
+                        }
+                    }
+
+                    .leftContainer{
+                        overflow: hidden;
+                        width: 80%;
+                        height: 50%;
+                        transform: rotate(-2deg);
+                        box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.534);
+                        border-radius: 10px;
+                        margin: 10px;
+                    .imgContainer{     
+                        margin: 0;
+                        overflow: hidden;
+                        height: 200px;
+                        object-fit: contain;
+                        
+                        img{
+                            height: 100%;
+
+                            @include mobile{
+                                height: 55%;
+                              
+                             }
+                        }
+                      
+                        
+                    }
+                  
+                    @include mobile{
+                        height: 100px;
+                     }
+                  
+                }
+           
+                p{
+                    margin-left: 1rem;
+                    overflow: hidden;
+                }
+                }
+                .right{
+                    overflow: hidden;
+                    height: 80%;
+                    flex: 6;
+                    padding-right: 20px;
+                    position: relative;
+
+                    h1, h3{
+                        @include mobile{
+                            font-size: 15px;
+                        } 
+                    }
+                    
+                .bottom{
+                    height: 50%;
+                    display: flex;
+                    .bottom-left{
+                        overflow: hidden;
+                        height: 120px;
+                        width: 150px;
+                        img{
+                            height: 100%;
+                            @include mobile{
+                                height: 60px;
+                             }
+                        }
+                        
+                        @include mobile{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 65px;
+                        } 
+                    }
+                    .bottom-right{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                            @include mobile{
+                                height: 60px;
+                            } 
+
+                            h3{
+
+                                @include mobile{
+                                   font-size: 12px;
+                                } 
+                            }
+                    }
+                }
+                 
+            }
+        }
+    }
+
+    .video{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .item{
+            overflow: hidden;
+            width: 700px;
+            height: 100%;
+            background: radial-gradient(#e66465, #090a0fbe);
+            border-radius: 20px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            
+            @include mobile{
+                width: 350px;
+                height: 90%;
+                padding: 4px;
+                margin: 0 20px 20px 20px;
+            }
+
+            .left{
+                overflow: hidden;
+                height: 120%;
+                width: 150%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 5px;
+                color: azure;
+                text-shadow: 2px 2px #0a0a0a42;
+
+                @include mobile{
+                    height: 300px;
+                    width: 300px;
+                }
+
+                .leftContainer{
+                    overflow: hidden;
+                    padding: 0;
+                    margin: 0;
+                    width: 48%;
+                    height: 58%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.534);
+                    border-radius: 10px;
+                    margin: 10px;
+
+                    @include mobile{
+                        height: 225px;
+                        width: 300px;
+                    }
+
+                        .imgContainer{ 
+                        overflow: hidden;
+                        justify-content: center;   
+                        align-items: center;
+                        display: flex;
+                        margin: 0;
+                        overflow: hidden;
+                        height: 300px;
+                        object-fit: contain;
+                        
+                        img{
+                            overflow: hidden;
+                            display: none;
+                        
+                        }
+                   
+                     
+                        
+                    }
+                }
+            p{
+                margin-left: 1rem;
+                overflow: hidden;
+            }
+            }
+           
+            .right{
+                display: none;
+        }
+    }
+    }
+    } 
+}

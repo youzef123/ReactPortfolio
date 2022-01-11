@@ -1,0 +1,143 @@
+@import "../../global.scss";
+
+.testimonials{
+    background-image: url('../../bg/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        overflow: hidden;
+        margin-top: 10px;
+        font-size: 40px;
+        transform: rotate(-3deg);
+
+        @include mobile{
+            font-style: 20px;
+        }
+    }
+  
+    .container{
+      
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        @include mobile{
+            margin-top: 30px;
+            padding-top: 10px;
+           flex-direction: column;
+           justify-content: space-between;
+        }
+
+        .card{
+            margin: 30px 0 0 20px;
+            background-color: white;
+            width: 250px;
+            height: 70%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px -8px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            transition: .5s ease;
+
+            @include mobile{
+                margin: 0;
+                height: 300px;
+                width: 350px;
+                margin-bottom: 10px;
+            }
+
+            &.featured{
+                width: 300px;
+                height: 75%;
+                margin: 0 30px;
+
+                @include mobile{
+                    display: none;
+                 }
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+
+        
+            .top{
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+                @include mobile{
+                    height: 40px;
+                  }
+
+                img{
+                    &.left, &.right{
+                        height: 25px;
+
+                    }
+                    &.user {
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin: 0 30px;
+
+                        @include mobile{
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                   
+                }
+                .right{
+                    cursor: pointer;
+                }
+            }
+
+            .center{
+                padding: 10px;
+                border-radius: 10px;
+                background-color: rgba(84, 87, 252, 0.24);
+
+                @include mobile{
+                   font-style: 12px;
+                   padding: 5px;
+                   margin: 3px;
+                   overflow:hidden;
+                 }
+
+            }
+            .bottom{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                h3{
+                    margin-top: 10px;
+
+                    @include mobile{
+                        margin-top: 1px;
+                        font-style: 10px;
+                     }
+                }
+                h4{
+                    color: gray;
+
+                    @include mobile{
+                      font-style: 10px;
+                     }
+                }
+            }
+        }
+   
+    }
+
+}
